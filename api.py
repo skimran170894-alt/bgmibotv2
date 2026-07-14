@@ -10,7 +10,7 @@ API_AUTH_TOKEN = "DRX_POWER_ULTRA_V4"
 @app.route('/hit', methods=['GET'])
 def start_attack():
     # Auth Check
-    token = request.args.get('token')
+    key = request.args.get('key')
     if token != API_AUTH_TOKEN:
         return jsonify({"status": "error", "message": "Unauthorized Access"}), 403
 
