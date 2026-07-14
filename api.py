@@ -42,6 +42,7 @@ def start_attack():
             "port": target_port,
             "time": duration,
             "vps_status": "32GB_POWER_MAX"
+            "status": "success"
         })
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
