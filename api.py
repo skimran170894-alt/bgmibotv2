@@ -3,6 +3,7 @@ import subprocess
 import os
 
 app = Flask(__name__)
+app.json.sort_keys = False
 
 # - Security Key taaki koi aur tumhari API use na kar sake
 API_AUTH_TOKEN = "DRX_POWER_ULTRA_V4"
