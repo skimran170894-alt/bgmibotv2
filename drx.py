@@ -20,7 +20,8 @@ else:
 bot = telebot.TeleBot(config['token'])
 # Agar API isi VPS par hai toh '127.0.0.1' use karein, varna VPS ka IP dalein
 #API_URL = "http://127.0.0.1:8080/hit"
-API_URL = "https://retrostress.net/api/start"
+#API_URL = "https://retrostress.net/api/start"
+API_URL = "https://bgmibotv2.onrender.com/hit"
 AUTH_TOKEN = "DRX_POWER_ULTRA_V4"
 KEY_API= "6378cea5c08195f4c92db7b8fe80966daa91cc20f5eb3fda160a815d86c9f348"
 
