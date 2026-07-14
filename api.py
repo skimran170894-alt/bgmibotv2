@@ -35,15 +35,14 @@ def start_attack():
         # subprocess.Popen use karna sahi hai background execution ke liye
         subprocess.Popen(command, shell=True)
         
-        return jsonify({
-               "success": True,
-               "data":{
+            return jsonify({
+                "success": True,
+                "data": {
                     "message": "Attack Launched Successfully",
                     "host": target_ip,
                     "port": target_port,
                     "time": duration,
                     "vps_status": "32GB_POWER_MAX"
-                #"status": "success"
                 }
             })
         '''
