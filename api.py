@@ -41,7 +41,7 @@ def start_attack():
             "host": target_ip,
             "port": target_port,
             "time": duration,
-            "vps_status": "32GB_POWER_MAX"
+            "vps_status": "32GB_POWER_MAX",
             "status": "success"
         })
     except Exception as e:
