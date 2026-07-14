@@ -11,7 +11,7 @@ API_AUTH_TOKEN = "DRX_POWER_ULTRA_V4"
 def start_attack():
     # Auth Check
     key = request.args.get('key')
-    if token != API_AUTH_TOKEN:
+    if key != API_AUTH_TOKEN:
         return jsonify({"status": "error", "message": "Unauthorized Access"}), 403
 
     # - Parameters from Bot/App
