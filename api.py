@@ -36,17 +36,16 @@ def start_attack():
         subprocess.Popen(command, shell=True)
         
         return jsonify({
-                "success": True,
-            "data":{
-            "status": "success",
-            "message": "Attack Launched Successfully",
-            "host": target_ip,
-            "port": target_port,
-            "time": duration,
-            "vps_status": "32GB_POWER_MAX",
-            "status": "success"
-            }
-        })
+               "success": True,
+               "data":{
+                    "message": "Attack Launched Successfully",
+                    "host": target_ip,
+                    "port": target_port,
+                    "time": duration,
+                    "vps_status": "32GB_POWER_MAX"
+                #"status": "success"
+                }
+            })
         '''
        return jsonify({
             "success": True,
